@@ -13,9 +13,14 @@ Execute these commands from the top level of the MacTCPHelper directory:
     cmake ../MacTCPHelper -DCMAKE_TOOLCHAIN_FILE=<<YOUR_PATH_TO_Retro68-build>>/toolchain/m68k-apple-macos/cmake/retro68.toolchain.cmake
     make install
 
-This will compile the helper library and the library and headers into the m68k-apple-macos toolchain.
+This will compile the helper library and install the library and headers into the m68k-apple-macos toolchain.
 
 ## Using MacTCPHelper in your code
 Once MacTCPHelper is installed in your toolchain, you can reference the header files like this:
 
-    #include <mactcp/CvtAddr.h>    #include <mactcp/TCPHi.h>To link to the MacTCPHelper library using CMAKE:    target_link_libraries(<<YOUR_TARGET>> MacTCPHelper)
+    #include <mactcp/CvtAddr.h>
+    #include <mactcp/TCPHi.h>
+
+To link to the MacTCPHelper library using CMAKE:
+
+    target_link_libraries(<<YOUR_TARGET>> MacTCPHelper)
